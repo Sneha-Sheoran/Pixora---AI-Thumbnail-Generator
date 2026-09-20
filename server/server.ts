@@ -38,6 +38,8 @@ declare module 'express-session'{
         next();
     });
 
+    app.set("trust proxy", 1);
+
     app.use(session({
         secret:process.env.SESSION_SECRET as string,
         resave:false,
