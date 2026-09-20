@@ -1,9 +1,9 @@
 import axios from "axios";
 
-console.log("VITE_BASE_URL:", import.meta.env.VITE_BASE_URL);
-
 const api = axios.create({
-    baseURL: import.meta.env.VITE_BASE_URL || 'http://localhost:3000',
+    // In production, we use a relative path so Vercel can proxy it. 
+    // In development, we use localhost:3000.
+    baseURL: import.meta.env.PROD ? "" : 'http://localhost:3000',
     withCredentials:true
 })
 
