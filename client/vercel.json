@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "https://pixora-server.vercel.app/"
+      "destination": "https://pixora-server.vercel.app/api/$1"
     },
     {
       "source": "/(.*)",
